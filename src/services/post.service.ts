@@ -1,4 +1,3 @@
-// src/services/post.service.ts
 import { Post } from "../schemas/post.model";
 import { User } from "../schemas/user.model";
 
@@ -7,7 +6,7 @@ export const getAllPosts = async () => {
     include: [
       {
         model: User,
-        attributes: ["uid", "name", "email"], // Campos que quieras mostrar
+        attributes: ["uid", "name", "email"],
       },
     ],
   });

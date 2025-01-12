@@ -1,4 +1,3 @@
-// src/schema/post.model.ts
 import {
   AllowNull,
   BelongsTo,

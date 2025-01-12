@@ -1,4 +1,3 @@
-// src/schema/user.model.ts
 import {
   AllowNull,
   Column,

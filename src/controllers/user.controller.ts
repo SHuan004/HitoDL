@@ -1,13 +1,9 @@
-// src/controllers/user.controller.ts
 import { Request, Response, NextFunction } from "express";
 import {
   getAllUsers,
   getUserWithPosts,
   createUser,
 } from "../services/user.service";
-
-// Si usas algún schema de validación (por ejemplo, Joi), puedes importarlo aquí.
-// import { createUserSchema, getUserSchema } from '../schemas/user.schema';
 
 /**
  * Obtener todos los usuarios (resumen)
@@ -23,7 +19,7 @@ const getAll = async (req: Request, res: Response, next: NextFunction) => {
       res.status(404).json({ message: "No hay usuarios." });
     }
   } catch (error) {
-    next(error); // Pasa el error al middleware global
+    next(error);
   }
 };
 
@@ -32,13 +28,6 @@ const getAll = async (req: Request, res: Response, next: NextFunction) => {
  */
 const getById = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    // Si tuvieras un schema de validación de params:
-    // const { error } = getUserSchema.validate(req.params);
-    // if (error) {
-    //   res.status(400).json({ message: error.message });
-    //   return;
-    // }
-
     const { id } = req.params;
     const user = await getUserWithPosts(id);
 
@@ -57,12 +46,6 @@ const getById = async (req: Request, res: Response, next: NextFunction) => {
  */
 const create = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    // Ejemplo de validación con Joi (opcional):
-    // const { error } = createUserSchema.validate(req.body);
-    // if (error) {
-    //   return res.status(400).json({ message: error.message });
-    // }
-
     const { name, email, password } = req.body;
 
     try {

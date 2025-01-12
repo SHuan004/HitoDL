@@ -1,4 +1,3 @@
-// src/services/user.service.ts
 import { User } from "../schemas/user.model";
 import { Post } from "../schemas/post.model";
 
