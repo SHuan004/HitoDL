@@ -59,8 +59,8 @@ A continuación, se muestra cómo levantar la base de datos con Docker y ejecuta
 
 1. **Clonar este repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   cd tu-repositorio
+   git clone https://github.com/SHuan004/HitoDL.git
+   cd HitoDL
    ```
 2. **Crear y levantar la base de datos con Docker**
 
@@ -158,7 +158,7 @@ Verás respuestas en formato JSON y los códigos de estado adecuados (por ejempl
 - Imagenes de las pruebas en el siguiente link.
 
 ```link
-www.gmail.com
+https://drive.google.com/drive/folders/1tHry8gJFCcQx58aoaHAMADFrAXTqOeGM?usp=sharing
 ```
 
 Con esto, satisfacemos los 3 requerimientos principales solicitados en el Hito 4.
