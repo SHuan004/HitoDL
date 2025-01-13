@@ -1,17 +1,7 @@
-// src/index.ts
-import express from "express";
+import app from "./app";
 import { sequelize } from "./config/sequelize";
-import userRoutes from "./routes/user.route";
-import postRoutes from "./routes/post.route";
 
-const app = express();
 const PORT = 3000;
-
-app.use(express.json());
-
-// Montar rutas
-app.use("/api/v1/users", userRoutes);
-app.use("/api/v1/posts", postRoutes);
 
 const main = async () => {
   try {
